@@ -1,14 +1,82 @@
 .modal_wrapper {
+    position: absolute;
+    top: 0;
     background-color: white;
     box-shadow: 0 5px 8px 0 rgba(15, 76, 129, 0.2), 0 7px 20px 0 rgba(15, 76, 129, 0.17);
-    margin: 10vh 10vw;
+    margin: 5vh 10vw;
     transition: all .8s;
     height: auto;
 }
 
-.modal_body {
-    padding: 10px 15px;
+.modal_header h1 {
+    color: rgb(15, 76, 129);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
     text-align: center;
+    padding: 1vh 6vw;
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal_body {
+    text-align: left;
+    padding: 3vh 6vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+}
+
+.info_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+}
+
+.modal_body div,
+.modal_body img {
+    flex-grow: 1;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+}
+
+.descr p,
+.info h6 {
+    text-align: left;
+    word-wrap: break-word
+}
+
+div.det {
+    flex-grow: 1;
+    width: 100px;
+}
+
+div.descr {
+    flex-grow: 4;
+    width: 200px;
+}
+
+.det span {
+    color: rgb(15, 76, 129);
+    font-weight: 800;
+}
+
+.modal_body p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal_body img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    margin-bottom: 4vh;
 }
 
 .close_modal_btn {
@@ -17,7 +85,8 @@
     float: right;
     font-size: 30px;
     font-weight: 800;
-    margin: 2vw 2vw;
+    margin: 1vw;
+
 }
 
 .close_modal_btn:hover {
