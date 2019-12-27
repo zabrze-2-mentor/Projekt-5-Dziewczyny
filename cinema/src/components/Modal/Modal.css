@@ -1,0 +1,25 @@
+.modal_wrapper {
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(15, 76, 129, 0.2), 0 7px 20px 0 rgba(15, 76, 129, 0.17);
+    margin: 10vh 10vw;
+    transition: all .8s;
+    height: auto;
+}
+
+.modal_body {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.close_modal_btn {
+    color: rgb(15, 76, 129);
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 2vw 2vw;
+}
+
+.close_modal_btn:hover {
+    color: rgb(107, 160, 206);
+}
