@@ -3,11 +3,11 @@ import './Modal.css';
 
 const Modal = (props) => {
     return (
-        <div>
+        <div className={props.clName}>
             <div className="modal_wrapper"
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-10vh)',
-                    opacity: props.show ? '1' : '0'
+                    display: props.show ? 'unset' : 'none'
                 }}>
                 <span className="close_modal_btn" onClick={props.close}>×</span>
                 <div className="modal_header">
@@ -16,7 +16,7 @@ const Modal = (props) => {
 
                 <div className="modal_body">
                     <div className="info">
-                        <img src="https://ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/splay/2019/11/harry-potter-kamie%C5%84-filozoficzny-premiera.jpg" />
+                        <img src="https://ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/splay/2019/11/harry-potter-kamie%C5%84-filozoficzny-premiera.jpg" alt="film" />
                         <div className="info_wrapper">
                             <div className="det">
                                 <h6><span>Gatunek: </span><br />Horror</h6>

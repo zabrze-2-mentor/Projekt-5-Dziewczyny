@@ -10,6 +10,7 @@
     -moz-transition: .3s ease-in-out all;
     -ms-transition: .3s ease-in-out all;
     -o-transition: .3s ease-in-out all;
+    margin: 15px;
 }
 
 .btn_blue {

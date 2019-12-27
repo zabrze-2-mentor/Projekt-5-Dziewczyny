@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
+import Cardwrapper from '../Cardwrapper/Cardwrapper';
 
 class App extends React.Component {
 
@@ -27,11 +27,7 @@ class App extends React.Component {
         <h1>
           U mnie działa
       </h1>
-        <Button
-          type="Button"
-          onClick={this.openModalHandler}
-          buttonStyle="btn_blue"
-        >Temporary modal button</Button>
+        <Cardwrapper wyswietlModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
           show={this.state.isShowing}

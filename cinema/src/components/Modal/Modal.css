@@ -92,3 +92,11 @@ div.descr {
 .close_modal_btn:hover {
     color: rgb(107, 160, 206);
 }
+
+.modal_false {
+    display: none;
+}
+
+.modal_true {
+    display: inline;
+}

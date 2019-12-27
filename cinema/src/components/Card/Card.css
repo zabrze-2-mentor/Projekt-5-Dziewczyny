@@ -1,0 +1,31 @@
+.card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 120px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.card p,
+.card h2 {
+    text-align: center;
+}
+
+.card h2 {
+    color: rgb(15, 76, 129);
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 18px;
+    margin: 5px 1vw;
+
+}
+
+.card hr {
+    border-color: rgb(15, 76, 129);
+    border-width: 5px;
+    margin: 0 60px;
+}
