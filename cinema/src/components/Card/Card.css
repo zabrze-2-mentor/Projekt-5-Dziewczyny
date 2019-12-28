@@ -1,3 +1,7 @@
+.card {
+    justify-content: space-between;
+}
+
 .card div {
     display: flex;
     flex-direction: column;

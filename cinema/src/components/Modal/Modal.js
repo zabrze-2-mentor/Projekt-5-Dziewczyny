@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Modal.css';
 
 const Modal = (props) => {
     return (
-        <div className={props.clName}>
+        <div>
             <div className="modal_wrapper"
                 style={{
                     transform: props.show ? 'translateY(0vh)' : 'translateY(-10vh)',

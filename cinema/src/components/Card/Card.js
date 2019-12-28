@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 import Button from '../Button/Button'
 
@@ -7,11 +8,12 @@ class Card extends React.Component {
     render() {
         return (
             <div className="card">
-                <img src="https://ocs-pl.oktawave.com/v1/AUTH_2887234e-384a-4873-8bc5-405211db13a2/splay/2019/11/harry-potter-kamie%C5%84-filozoficzny-premiera.jpg" alt="film" />
-                <h2>Tytuł filmu który moze być długi albo krótki</h2>
+                <img src={this.props.poster_path} alt="film" />
+                <h2>{this.props.title}</h2>
                 <hr />
                 <p>
-                    Gatunek filmu
+                    Średnia ocena: <br />
+                    <b>{this.props.vote_average}</b>
                 </p>
 
                 <Button
@@ -23,6 +25,17 @@ class Card extends React.Component {
             </div>
         );
     }
+}
+
+Card.propTypes = {
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+}
+
+Card.defaultProps = {
+    poster_path: "https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png",
+    title: "Nie podano tytułu",
+    vote_average: "-",
 }
 
 export default Card;
