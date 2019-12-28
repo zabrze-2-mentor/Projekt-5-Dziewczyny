@@ -27,7 +27,7 @@ class App extends React.Component {
         <h1>
           U mnie działa
       </h1>
-        <Cardwrapper wyswietlModal={this.openModalHandler}></Cardwrapper>
+        <Cardwrapper showModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
           show={this.state.isShowing}

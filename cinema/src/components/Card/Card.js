@@ -18,7 +18,7 @@ class Card extends React.Component {
 
                 <Button
                     type="Button"
-                    onClick={e => this.props.wyswietlModal(e)}
+                    onClick={e => this.props.showModal(e)}
                     buttonStyle="btn_blue"
                 >Więcej</Button>
 
