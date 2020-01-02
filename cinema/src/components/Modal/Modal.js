@@ -18,8 +18,9 @@ const Modal = (props) => {
             <div className="modal_body">
                 <img src={props.poster} alt="film" />
                 <div className="det">
+                    <h6><span>Tytuł orginału: </span><br />{props.original_title}</h6>
                     <h6><span>Gatunek: </span><br />{props.genre}</h6>
-                    <h6><span>Rok produkcji: </span><br />{props.release_date}</h6>
+                    <h6><span>Data premiery: </span><br />{props.release_date}</h6>
                     <h6><span>Język orginału: </span><br />{props.original_language}</h6>
                 </div>
                 <div className="descr">

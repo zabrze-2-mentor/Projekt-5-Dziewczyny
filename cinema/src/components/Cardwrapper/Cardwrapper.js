@@ -11,7 +11,7 @@ class Cardwrapper extends React.Component {
     componentDidMount() {
         axios.get('https://api.themoviedb.org/3/search/movie?api_key=7577499825866d024e32d6b01e43a95f&language=en-US&query=breaking&page=1&include_adult=false')
             .then(res => {
-                console.log(res)
+
                 this.setState({
                     movies: res.data.results
                 })
@@ -33,7 +33,7 @@ class Cardwrapper extends React.Component {
                     </Card>
                 )
             })
-        ) : (<p>Loading</p>)
+        ) : (<p>Loading...</p>)
 
         return (
             <div className="cardwrapper" >
