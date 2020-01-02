@@ -6,6 +6,7 @@
     margin: 5vh 10vw;
     transition: all .8s;
     height: auto;
+    width: 80vw;
 }
 
 .modal_header h1 {
@@ -22,17 +23,9 @@
 .modal_body {
     text-align: left;
     padding: 3vh 6vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: stretch;
-}
-
-.info_wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
 }
 
 .modal_body div,
@@ -40,27 +33,9 @@
     flex-grow: 1;
 }
 
-.info {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: stretch;
-}
-
-.descr p,
-.info h6 {
+.descr p {
     text-align: left;
     word-wrap: break-word
-}
-
-div.det {
-    flex-grow: 1;
-    width: 100px;
-}
-
-div.descr {
-    flex-grow: 4;
-    width: 200px;
 }
 
 .det span {
@@ -86,7 +61,6 @@ div.descr {
     font-size: 30px;
     font-weight: 800;
     margin: 1vw;
-
 }
 
 .close_modal_btn:hover {
