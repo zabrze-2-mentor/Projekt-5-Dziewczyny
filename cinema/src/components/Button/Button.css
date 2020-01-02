@@ -1,0 +1,36 @@
+.btn_main {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    padding: 10px 30px;
+    transition: .3s ease-in-out all;
+    -webkit-transition: .3s ease-in-out all;
+    -moz-transition: .3s ease-in-out all;
+    -ms-transition: .3s ease-in-out all;
+    -o-transition: .3s ease-in-out all;
+    margin: 15px;
+}
+
+.btn_blue {
+    color: rgb(15, 76, 129);
+    border: 5px solid rgb(15, 76, 129);
+}
+
+.btn_blue:hover {
+    color: rgb(107, 160, 206);
+    border: 5px solid rgb(107, 160, 206);
+    text-decoration: none;
+}
+
+.btn_white {
+    color: white;
+    border: 5px solid white;
+}
+
+.btn_white:hover {
+    color: rgb(156, 192, 224);
+    border: 5px solid rgb(156, 192, 224);
+    text-decoration: none;
+}
