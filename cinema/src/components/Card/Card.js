@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Card.css';
 import Button from '../Button/Button'
+import {useSelector, useDispatch} from 'react-redux'
+import {modalAction} from '../../actions'
+import {connect} from 'react-redux'
 
 class Card extends React.Component {
 
@@ -18,7 +21,8 @@ class Card extends React.Component {
 
                 <Button
                     type="Button"
-                    onClick={e => this.props.showModal(this.props.id)}
+                    onClick={e => this.props.showModal(this.props.id)
+                    }
                     buttonStyle="btn_blue"
                 >Więcej</Button>
 
@@ -26,7 +30,8 @@ class Card extends React.Component {
         );
     }
 }
-
+/*                <Button onClick={e=> useDispatch(modalAction())}>+</Button>
+ */
 Card.propTypes = {
     poster_path: PropTypes.string,
     title: PropTypes.string,
@@ -39,3 +44,4 @@ Card.defaultProps = {
 }
 
 export default Card;
+//export default connect(mapStateToProps)()

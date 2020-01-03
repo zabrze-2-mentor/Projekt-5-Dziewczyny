@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Modal.css';
+import {useSelector} from 'react-redux'
+
 
 const Modal = (props) => {
+    const modal=useSelector(state=>state.modalReducer)
     return (
 
         <div className="modal_wrapper"

@@ -5,14 +5,16 @@ import './App.css';
 import Modal from '../Modal/Modal';
 import Cardwrapper from '../Cardwrapper/Cardwrapper';
 
+import {useSelector} from 'react-redux'
+import {modalAction} from '../../actions'
 class App extends React.Component {
-
   state = {
     isShowing: false,
     movie: [],
     genreName: [],
   }
-
+ // let modalReducer= useSelector(state=>state.modalReducer)
+// let dispatch =useDispatch()
   openModalHandler = (movieId) => {
     this.setState({
       isShowing: true
