@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import Modal from '../Modal/Modal';
 import Cardwrapper from '../Cardwrapper/Cardwrapper';
+import Navbar from '../Navbar/Navbar'
 
 class App extends React.Component {
 
@@ -48,6 +49,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Navbar />
         <Cardwrapper showModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
