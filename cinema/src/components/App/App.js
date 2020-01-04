@@ -16,6 +16,16 @@ class App extends React.Component {
     movies: []
   }
 
+  componentDidMount() {
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=7577499825866d024e32d6b01e43a95f&language=en-US&query=breaking&include_adult=false')
+      .then(res => {
+
+        this.setState({
+          movies: res.data.results
+        })
+      })
+  }
+
   onSearchSubmit = async (term) => {
     const response = await axios.get('https://api.themoviedb.org/3/search/movie', {
       params: {
@@ -63,7 +73,7 @@ class App extends React.Component {
       <div>
         <Navbar />
         <SearchBar onSubmit={this.onSearchSubmit} />
-        <Cardwrapper showModal={this.openModalHandler}></Cardwrapper>
+        <Cardwrapper movies={this.state.movies} showModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
           show={this.state.isShowing}

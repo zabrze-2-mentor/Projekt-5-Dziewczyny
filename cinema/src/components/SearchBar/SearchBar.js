@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
                                         placeholder="Wyszukaj..."
                                         value={this.state.term}
                                         onChange={e => this.setState({ term: e.target.value })} />
-                                    <i aria-hidden="true" className="search icon"></i>
+                                    <button type="submit"><i aria-hidden="true" className="search icon"></i></button>
                                 </div>
                             </div>
                         </div>
