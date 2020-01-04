@@ -5,6 +5,7 @@ import './App.css';
 import Modal from '../Modal/Modal';
 import Cardwrapper from '../Cardwrapper/Cardwrapper';
 import Navbar from '../Navbar/Navbar'
+import SearchBar from '../SearchBar/SearchBar'
 
 class App extends React.Component {
 
@@ -50,6 +51,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+        <SearchBar />
         <Cardwrapper showModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
