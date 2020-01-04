@@ -1,0 +1,14 @@
+.navbar {
+    background: rgb(15,76,129);
+    margin-bottom: 2rem;
+
+    
+}
+
+.nav-link {
+    color: white !important;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
