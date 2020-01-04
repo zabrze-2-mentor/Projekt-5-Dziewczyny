@@ -6,6 +6,8 @@ import Modal from '../Modal/Modal';
 import Cardwrapper from '../Cardwrapper/Cardwrapper';
 import Navbar from '../Navbar/Navbar'
 import SearchBar from '../SearchBar/SearchBar'
+import Footer from '../Footer/Footer'
+import Banner from '../Banner/Banner'
 
 class App extends React.Component {
 
@@ -71,6 +73,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Banner />
         <Navbar />
         <SearchBar onSubmit={this.onSearchSubmit} />
         <Cardwrapper movies={this.state.movies} showModal={this.openModalHandler}></Cardwrapper>
@@ -86,6 +89,8 @@ class App extends React.Component {
           genre={this.state.genreName}
           original_language={this.state.movie.original_language}>
         </Modal>
+        <Footer />
+        <Banner />
       </div>
     );
   }
