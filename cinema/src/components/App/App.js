@@ -5,6 +5,7 @@ import './App.css';
 import Modal from '../Modal/Modal';
 import Cardwrapper from '../Cardwrapper/Cardwrapper';
 import Navbar from '../Navbar/Navbar'
+import SearchBar from '../SearchBar/SearchBar'
 
 class App extends React.Component {
 
@@ -12,6 +13,27 @@ class App extends React.Component {
     isShowing: false,
     movie: [],
     genreName: [],
+    movies: []
+  }
+
+  componentDidMount() {
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=7577499825866d024e32d6b01e43a95f&language=en-US&query=breaking&include_adult=false')
+      .then(res => {
+
+        this.setState({
+          movies: res.data.results
+        })
+      })
+  }
+
+  onSearchSubmit = async (term) => {
+    const response = await axios.get('https://api.themoviedb.org/3/search/movie', {
+      params: {
+        api_key: '7577499825866d024e32d6b01e43a95f',
+        query: term
+      }
+    })
+    this.setState({ movies: response.data.results });
   }
 
   openModalHandler = (movieId) => {
@@ -50,7 +72,8 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <Cardwrapper showModal={this.openModalHandler}></Cardwrapper>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+        <Cardwrapper movies={this.state.movies} showModal={this.openModalHandler}></Cardwrapper>
         <Modal
           className="modal"
           show={this.state.isShowing}
