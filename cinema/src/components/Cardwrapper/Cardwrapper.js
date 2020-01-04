@@ -24,7 +24,11 @@ class Cardwrapper extends React.Component {
         ) : (<p>Loading...</p>)
 
         if (movies.length < 1) {
-            return <div>Nie znaleziono filmu</div>
+            return (
+                <div className="container">
+                    <p>Nie znaleziono filmu. Spróbuj jeszcze raz.</p>
+                </div >
+            )
         }
 
         return (
